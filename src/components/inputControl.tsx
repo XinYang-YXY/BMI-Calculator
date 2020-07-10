@@ -1,0 +1,28 @@
+import React from 'react';
+import { IonSegment, IonSegmentButton, IonLabel } from '@ionic/react';
+
+
+// <{selectedValue: 'mkg' | 'ftlbs'}> selects the type of input
+const inputControl: React.FC<{selectedValue: 'mkg' | 'ftlbs'; onSelectValue: (value: 'mkg' | 'ftlbs') => void}> = props => {
+    // onIonChange gives an event of event:CustomEvent type
+    const inputChangeHandler = (event:CustomEvent) => {
+        props.onSelectValue(event.detail.value);
+    }
+    return (
+        <IonSegment value={props.selectedValue} onIonChange={inputChangeHandler}>
+            <IonSegmentButton value="mkg">
+                <IonLabel>
+                    m/kg
+                </IonLabel>
+            </IonSegmentButton>
+            <IonSegmentButton value="ftlbs">
+                <IonLabel>
+                    f/lbs
+                </IonLabel>
+            </IonSegmentButton>
+        </IonSegment>
+    );
+}
+
+
+export default inputControl;

@@ -1,6 +1,6 @@
 {
-  "short_name": "Ionic App",
-  "name": "My Ionic App",
+  "short_name": "BMI Calculator",
+  "name": "BMI Calculator - XinYang[YXY] | Made with Ionic, React, Typescript",
   "icons": [
     {
       "src": "assets/icon/favicon.png",
